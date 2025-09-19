@@ -1,0 +1,56 @@
+{
+  "favourites": [
+    {
+      "title": "verysilly.site",
+      "description": "My personal website.",
+      "status": "finished",
+      "logo": "assets/favicon.ico",
+      "url": "https://github.com/bussystation/verysilly.site",
+      "icon": "fas fa-external-link-alt",
+      "languages": [
+        { "name": "HTML", "class": "code-html" },
+        { "name": "CSS", "class": "code-css" },
+        { "name": "JS", "class": "code-js" }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "title": "Coco Pops.",
+      "description": "It's just Coco Pops.",
+      "status": "finished",
+      "logo": "https://tr.rbxcdn.com/180DAY-96f275c8c4a60f4cfa79b4be3b67f1e1/352/352/Image/Png/noFilter",
+      "url": "https://www.roblox.com/games/13413041261/Coco-Pops",
+      "icon": "fas fa-external-link-alt",
+      "languages": [
+        { "name": "LUA", "class": "code-lua" }
+      ]
+    },
+    {
+      "title": "Explode.",
+      "description": "It's in the name 🤷‍♂️",
+      "status": "finished",
+      "logo": "https://tr.rbxcdn.com/180DAY-b8e7f3916263b0f2743839debcb73af3/352/352/Image/Png/noFilter",
+      "url": "https://www.roblox.com/games/12651990651/Explode",
+      "icon": "fas fa-external-link-alt",
+      "languages": [
+        { "name": "LUA", "class": "code-lua" }
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "title": "verysilly.site",
+      "description": "My personal website.",
+      "status": "finished",
+      "logo": "assets/favicon.ico",
+      "url": "https://github.com/bussystation/verysilly.site",
+      "icon": "fas fa-external-link-alt",
+      "languages": [
+        { "name": "HTML", "class": "code-html" },
+        { "name": "CSS", "class": "code-css" },
+        { "name": "JS", "class": "code-js" }
+      ]
+    }
+  ]
+}
