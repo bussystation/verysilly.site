@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://verysilly.site/">
+    <title>The Silliest Site :3</title>
+    <meta name="description" content="Hello, I'm Kaden and I'm silly">
+    <meta name="theme-color" content="#ffb6ff">
+    
+    <!-- Open Graph -->
+    <meta property="og:image" content="https://verysilly.site/assets/favicon.ico">
+    <meta property="og:url" content="https://verysilly.site/">
+    <meta property="og:title" content="The Silliest Site :3">
+    <meta property="og:description" content="Hello, I'm Kaden and I'm silly">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav">
+            <a class="section-jump" href="#home" draggable="false">Home</a>
+            <a class="section-jump" href="#projects" draggable="false">Projects</a>
+            <a class="section-jump" href="#contact" draggable="false">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <noscript>
+            <h1 class="error-header1"><a class="error-number" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> is required for this website.</h1>
+
+            <hr class="section-cut">
+
+            <p class="error-text">If you wish to visit this website, please enable JavaScript.</p>
+        </noscript>
+        <!-- Home Section -->
+        <section id="home">
+            <!-- Introduction -->
+            <section class="intro">
+                <img class="intro-guy" src="assets/agahi.gif" alt="agahi 7tv emote">
+                <p class="intro-text">I'm <span class="name-anim">Kaden</span>!!</p>
+            </section>
+
+            <hr class="section-cut">
+            
+            <!-- About Me -->
+            <section>
+                <h1 class="section-title">About Me</h1>
+                <h2 class="section-subtitle">Here's a lil info dump about who I am and what I do!</h2>
+                <div class="about-card">
+                    <p class="about-text">
+                        I'm an <span id="age-count"></span> year old game development student from Scotland! 
+                        I've been obsessed with computers for as long as I remember. Although I've only recently 
+                        started developing games, websites, and building desktop computers.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="section-cut">
+            
+            <!-- Webrings -->
+            <section>
+                <h1 class="section-title">Webrings</h1>
+                <h2 class="section-subtitle">Here are the webrings I'm part of!</h2>
+                <section class="webring-list">
+                    <!-- GameDev Webring -->
+                    <div class="webring">
+                        <a class="webring-title" href="https://www.rainbowcemetery.com/devring/list.php?id=0" target="_blank">
+                            <img class="webring-img1" src="https://www.rainbowcemetery.com/favicon-32x32.png" alt="gamedev webring icon">
+                            GameDev Webring
+                            <img class="webring-img2" src="https://www.rainbowcemetery.com/favicon-32x32.png" alt="gamedev webring icon">
+                        </a>
+                        <section class="webring-controls">
+                            <a class="webring-button" href="https://www.rainbowcemetery.com/devring/prev.php?id=0">
+                                <i class="fas fa-backward"></i>
+                            </a>
+                            <a class="webring-rand" href="https://www.rainbowcemetery.com/devring/rand.php?id=0">RANDOM</a>
+                            <a class="webring-button" href="https://www.rainbowcemetery.com/devring/next.php?id=0">
+                                <i class="fas fa-forward"></i>
+                            </a>
+                        </section>
+                    </div>
+                    
+                    <!-- Silly City -->
+                    <div class="webring">
+                        <a class="webring-title" href="https://silly.city/" target="_blank">
+                            <img class="webring-img1" src="https://silly.city/toma-wai.gif" alt="silly city icon">
+                            Silly City
+                            <img class="webring-img2" src="https://silly.city/toma-wai.gif" alt="silly city icon">
+                        </a>
+                        <section class="webring-controls">
+                            <a class="webring-button" href="https://silly.city/prev?user=Kaden">
+                                <i class="fas fa-backward"></i>
+                            </a>
+                            <a class="webring-rand" href="https://silly.city/random">RANDOM</a>
+                            <a class="webring-button" href="https://silly.city/next?user=Kaden">
+                                <i class="fas fa-forward"></i>
+                            </a>
+                        </section>
+                    </div>
+                </section>
+            </section>
+
+            <hr class="section-cut">
+            
+            <!-- Activity -->
+            <section>
+                <h1 class="section-title">Activity</h1>
+                <h2 class="section-subtitle">What I'm up to right now.</h2>
+                
+                <div class="profile-wrapper">
+                    <!-- Discord Card -->
+                    <div class="discord-card">
+                        <img class="dc-banner" src="assets/discord-profile/banner.png" alt="Discord Banner" draggable="false">
+                        <div class="dc-status-bubble" id="dc-custom-status"></div>
+                        <section class="dc-profile">
+                            <div class="dc-avatar">
+                                <div id="dc-status"></div>
+                            </div>
+                            <p class="dc-username">
+                                <span class="dc-tag">@</span>
+                                <span id="dc-user"></span>
+                                <span id="dc-badges"></span>
+                            </p>
+                            <hr class="dc-separator">
+                            <p class="dc-active-times">
+                                Active hours: 
+                                <span class="dc-active-hours" id="first-hour"></span> - <span class="dc-active-hours" id="last-hour"></span>
+                            </p>
+                        </section>
+                        <a class="dc-icon" href="https://discord.com/users/1105670358419374120" target="_blank">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Spotify Card -->
+                    <div class="spotify-card" id="spotify-card" style="display:none;">
+                        <img class="sp-banner" id="spotify-album" src="" alt="Album Art" draggable="false">
+                        <section class="sp-profile">
+                            <p class="sp-song" id="spotify-song"></p>
+                            <p class="sp-artist" id="spotify-artist"></p>
+                            <div class="sp-progress">
+                                <span id="sp-current"></span>
+                                <div class="sp-bar">
+                                    <div id="sp-fill"></div>
+                                </div>
+                                <span id="sp-duration"></span>
+                            </div>
+                        </section>
+                        <a class="sp-icon" id="spotify-link" target="_blank">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Game Card -->
+                    <div class="game-card" id="game-card" style="display:none;">
+                        <img class="game-banner" id="game-icon" src="" alt="Game Icon" draggable="false">
+                        <section class="game-profile">
+                            <p class="game-title" id="game-name"></p>
+                            <p class="game-details" id="game-details"></p>
+                            <p class="game-time">Playing for: <span id="game-duration"></span></p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" style="display: none;">
+            <!-- Favorite Projects -->
+            <h1 class="section-title">Favourite Projects</h1>
+            <h2 class="section-subtitle">My best work so far.</h2>
+            <div class="project-list" id="favourites"></div>
+
+            <hr class="section-cut">
+            
+            <!-- Games -->
+            <h1 class="section-title">Games</h1>
+            <h2 class="section-subtitle">Games I've created.</h2>
+            <div class="project-list" id="games"></div>
+
+            <hr class="section-cut">
+            
+            <!-- Websites -->
+            <h1 class="section-title">Websites</h1>
+            <h2 class="section-subtitle">Websites I've built.</h2>
+            <div class="project-list" id="websites"></div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" style="display: none;">
+            <h1 class="section-title">Contact Me</h1>
+            <h2 class="section-subtitle"></h2>
+
+            <!-- contact form -->
+            <form class="contact-form" action="https://formspree.io/f/mvgberbb" method="POST">
+                <label class="contact-label">
+                    Your Name:
+                    <input class="contact-input" type="text" name="name" required placeholder="John Doe">
+                </label>
+
+                <label class="contact-label">
+                    Your Email:
+                    <input class="contact-input" type="email" name="email" required placeholder="example@email.com">
+                </label>
+
+                <label class="contact-label">
+                    Subject:
+                    <input class="contact-input" type="text" name="subject" required placeholder="Collaboration Inquiry">
+                </label>
+
+                <label class="contact-label">
+                    Your Message:
+                    <textarea class="contact-textarea" name="message" required placeholder="Hi Kaden, I’d love to discuss a project idea."></textarea>
+                </label>
+
+                <button type="submit" class="contact-button">Send</button>
+            </form>
+
+
+            <div class="contact-response"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="copyright">Made with <i class="fas fa-heart"></i> by <span class="name-footer">Kaden</span> &copy; 2025</p>
+
+        <div class="social-icons">
+            <!-- Personal Links -->
+            <a class="social-link" href="https://discord.com/users/1105670358419374120" target="_blank" draggable="false">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a class="social-link" href="https://www.tiktok.com/@bussystation" target="_blank" draggable="false">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a class="social-link" href="https://steamcommunity.com/profiles/76561199234286429/" target="_blank" draggable="false">
+                <i class="fab fa-steam"></i>
+            </a>
+            <a class="social-link" href="https://www.reddit.com/user/bussystation/" target="_blank" draggable="false">
+                <i class="fab fa-reddit"></i>
+            </a>
+            <a class="social-link" href="https://twitter.com/bussystation" target="_blank" draggable="false">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            <p>|</p> <!-- Separator -->
+            
+            <!-- Project Links -->
+            <a class="social-link" href="https://store.steampowered.com/publisher/VerySilly-Games/" target="_blank" draggable="false">
+                <i class="fab fa-steam"></i>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/@VerySillyGames" target="_blank" draggable="false">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a class="social-link" href="https://github.com/bussystation" target="_blank" draggable="false">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+    <!-- Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Speed Insights -->
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
