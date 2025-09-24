@@ -32,7 +32,7 @@
       "title": "Jerry's Diner",
       "description": "A game I made in high school.",
       "status": "finished",
-      "logo": "projects/assets/jd-logo.png",
+      "logo": "assets/projects/jd-logo.png",
       "url": "https://bussystation.github.io/JerrysDiner/",
       "icon": "fas fa-external-link-alt",
       "languages": [
