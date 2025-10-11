@@ -1,0 +1,80 @@
+{
+  "favourites": [
+    {
+      "title": "verysilly.site",
+      "description": "My personal website.",
+      "status": "finished",
+      "logo": "/assets/projects/verysilly_site.png",
+      "url": "https://github.com/bussystation/verysilly.site",
+      "icon": "fas fa-arrow-up-right-from-square",
+      "languages": [
+        { "name": "HTML", "class": "code-html" },
+        { "name": "CSS", "class": "code-css" },
+        { "name": "JS", "class": "code-js" }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "title": "Jerry's Diner",
+      "description": "A game I made in high school.",
+      "status": "finished",
+      "logo": "/assets/projects/jerrys_diner.png",
+      "url": "https://bussystation.github.io/JerrysDiner/",
+      "icon": "fas fa-arrow-up-right-from-square",
+      "languages": [
+        { "name": "TypeScript", "class": "code-ts" }
+      ]
+    },
+    {
+      "title": "Coco Pops.",
+      "description": "It's just Coco Pops.",
+      "status": "finished",
+      "logo": "/assets/projects/coco_pops.png",
+      "url": "https://www.roblox.com/games/13413041261/Coco-Pops",
+      "icon": "fas fa-arrow-up-right-from-square",
+      "languages": [
+        { "name": "LUA", "class": "code-lua" }
+      ]
+    },
+    {
+      "title": "Explode.",
+      "description": "It's in the name 🤷‍♂️",
+      "status": "finished",
+      "logo": "/assets/projects/explode.png",
+      "url": "https://www.roblox.com/games/12651990651/Explode",
+      "icon": "fas fa-arrow-up-right-from-square",
+      "languages": [
+        { "name": "LUA", "class": "code-lua" }
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "title": "verysilly.site",
+      "description": "My personal website.",
+      "status": "finished",
+      "logo": "/assets/projects/verysilly_site.png",
+      "url": "https://github.com/bussystation/verysilly.site",
+      "icon": "fas fa-arrow-up-right-from-square",
+      "languages": [
+        { "name": "HTML", "class": "code-html" },
+        { "name": "CSS", "class": "code-css" },
+        { "name": "JS", "class": "code-js" }
+      ]
+    },
+    {
+      "title": "archivesmp.net",
+      "description": "The official website for Archive SMP",
+      "status": "finished",
+      "logo": "/assets/projects/archivesmp_net.png",
+      "url": "https://archivesmp.net",
+      "icon": "fas fa-arrow-up-right-from-square",
+      "languages": [
+        { "name": "HTML", "class": "code-html" },
+        { "name": "CSS", "class": "code-css" },
+        { "name": "JS", "class": "code-js" }
+      ]
+    }
+  ]
+}

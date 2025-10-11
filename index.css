@@ -1,0 +1,355 @@
+.about-card {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background: rgba(48, 52, 70, 0.6);
+    backdrop-filter: blur(5px);
+    border: 3px solid #babbf1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-txt {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+/* webring section */
+.webring-list {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.webring-list > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+.webring-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 75px;
+    padding: 15px;
+    background: rgba(48, 52, 70, 0.6);
+    backdrop-filter: blur(5px);
+    border: 3px solid #babbf1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.webring-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(186, 187, 241, 0.3);
+    border-color: #ca9ee6;
+}
+
+.webring-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f4b8e4;
+    text-shadow: 0 0 8px rgba(244, 184, 228, 0.2);
+    transition: all 0.3s ease;
+}
+
+.webring-title:hover {
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(244, 184, 228, 0.4);
+}
+
+.webring-img1, .webring-img2 {
+    width: 28px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 5px rgba(244, 184, 228, 0.3));
+    transition: all 0.3s ease;
+}
+
+.webring-title:hover .webring-img1,
+.webring-title:hover .webring-img2 {
+    filter: drop-shadow(0 0 10px rgba(244, 184, 228, 0.6));
+}
+
+.webring-title:hover .webring-img1 {
+    transform: translateX(-3px);
+}
+
+.webring-title:hover .webring-img2 {
+    transform: translateX(3px) scaleX(-1);
+}
+
+.webring-img2 {
+    transform: scaleX(-1);
+}
+
+.webring-controls {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.webring-button {
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.webring-button:hover {
+    color: #f5c2e7;
+    background: rgba(245, 194, 231, 0.1);
+    transform: scale(1.1);
+}
+
+.webring-rand {
+    font-weight: 600;
+    font-size: 18px;
+    user-select: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    background: rgba(186, 187, 241, 0.1);
+    transition: all 0.3s ease;
+}
+
+.webring-rand:hover {
+    color: #f5c2e7;
+    letter-spacing: 1px;
+    background: rgba(245, 194, 231, 0.15);
+    box-shadow: 0 0 10px rgba(245, 194, 231, 0.3);
+    transform: scale(1.05);
+}
+
+/* activity cards */
+.activity-list {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.game-card,
+.song-card,
+.movie-card {
+    display: none;
+    align-items: center;
+}
+
+.game-card, .song-card, .movie-card {
+    display: flex;
+    min-height: 75px;
+    padding: 10px;
+    background: rgba(48, 52, 70, 0.6);
+    backdrop-filter: blur(5px);
+    border: 3px solid #babbf1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.game-card:hover, .song-card:hover, .movie-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(186, 187, 241, 0.3);
+    border-color: #ca9ee6;
+}
+
+.game-icon {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(245, 194, 231, 0.3);
+    transition: all 0.3s ease;
+}
+
+.game-card:hover .game-icon {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(245, 194, 231, 0.5);
+}
+
+.song-icon {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(245, 194, 231, 0.4);
+    animation: spin 18s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.song-card:hover .song-icon {
+    box-shadow: 0 0 20px rgba(245, 194, 231, 0.6);
+}
+
+.movie-icon {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(245, 194, 231, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-icon {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(245, 194, 231, 0.5);
+}
+
+.activity-info {
+    padding: 0 10px;
+}
+
+.activity-title {
+    font-size: 14px;
+    color: #9399b2;
+    margin-bottom: 5px;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.game-card:hover .activity-title,
+.song-card:hover .activity-title,
+.movie-card:hover .activity-title {
+    color: #bac2de;
+}
+
+.game-name, .song-name, .movie-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: #f5c2e7;
+    text-shadow: 0 0 8px rgba(245, 194, 231, 0.2);
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 270px;
+    vertical-align: top;
+}
+
+.game-details, .song-artist, .movie-details {
+    font-size: 15px;
+    color: #bac2de;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 270px;
+    vertical-align: top;
+}
+
+/* time & weather cards */
+.activity-card {
+    min-height: 75px;
+    padding: 10px;
+    background: rgba(48, 52, 70, 0.6);
+    backdrop-filter: blur(5px);
+    border: 3px solid #babbf1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.activity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(186, 187, 241, 0.3);
+    border-color: #ca9ee6;
+}
+
+.location-info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.current-time, .current-weather {
+    font-size: 19px;
+    font-weight: 600;
+    color: #f5c2e7;
+    text-shadow: 0 0 8px rgba(245, 194, 231, 0.2);
+}
+
+.location-details {
+    font-size: 15px;
+    color: #bac2de;
+}
+
+/* buttons section */
+.button-list {
+    margin-top: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    padding: 10px;
+    background: rgba(48, 52, 70, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    border: 3px solid #babbf1;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.button-list:hover {
+    border-color: #ca9ee6;
+    box-shadow: 0 4px 15px rgba(186, 187, 241, 0.2);
+}
+
+.button-list img {
+    transition: all 0.3s ease;
+}
+
+.button-list img:hover {
+    transform: scale(1.15) translateY(-2px);
+    filter: drop-shadow(0 0 8px rgba(245, 194, 231, 0.5));
+}
+
+.error-link {
+    text-decoration: underline;
+    text-decoration-color: #babbf1;
+    text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+    .webring-list,
+    .activity-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .webring-list > :last-child:nth-child(odd) {
+        grid-column: 1;
+    }
+    
+    .button-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 12px;
+    }
+    
+    .game-icon, .song-icon, .movie-icon {
+        width: 70px;
+        height: 70px;
+    }
+}

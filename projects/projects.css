@@ -1,0 +1,227 @@
+.favourite-projects,
+.game-projects,
+.website-projects {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px 0 auto;
+    user-select: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 15px;
+}
+
+.project-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    padding: 16px;
+    background: rgba(48, 52, 70, 0.6);
+    backdrop-filter: blur(10px);
+    border: 3px solid #babbf1;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* stagger the animations a bit */
+.project-card:nth-child(1) { animation-delay: 0.05s; }
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.15s; }
+.project-card:nth-child(4) { animation-delay: 0.2s; }
+.project-card:nth-child(5) { animation-delay: 0.25s; }
+.project-card:nth-child(6) { animation-delay: 0.3s; }
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(202, 158, 230, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(186, 187, 241, 0.4);
+    border-color: #ca9ee6;
+}
+
+.project-card .fas {  
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 16px;
+    color: #babbf1;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 3px rgba(186, 187, 241, 0.3));
+}
+
+.project-card:hover .fas {
+    transform: scale(1.3) rotate(5deg);
+    color: #ca9ee6;
+    filter: drop-shadow(0 0 8px rgba(202, 158, 230, 0.6));
+}
+
+.project-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 12px;
+    filter: drop-shadow(0 0 8px rgba(244, 184, 228, 0.3));
+    transition: all 0.4s ease;
+}
+
+.project-card:hover .project-logo {
+    filter: drop-shadow(0 0 15px rgba(244, 184, 228, 0.6));
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #f4b8e4;
+    text-shadow: 0 0 10px rgba(244, 184, 228, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 4px;
+}
+
+.project-card:hover .project-title {
+    text-shadow: 0 0 20px rgba(244, 184, 228, 0.6);
+    color: #f5c2e7;
+    letter-spacing: 0.5px;
+}
+
+.project-desc {
+    font-size: 15px;
+    color: #bac2de;
+    line-height: 1.4;
+}
+
+.project-code {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #bac2de;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* language colors */
+.code-ts { 
+    color: #3178c6; 
+    text-shadow: 0 0 8px rgba(49, 120, 198, 0.4);
+}
+
+.code-lua { 
+    color: #51a0cf; 
+    text-shadow: 0 0 8px rgba(81, 160, 207, 0.4);
+}
+
+.code-html { 
+    color: #f2672e; 
+    text-shadow: 0 0 8px rgba(242, 103, 46, 0.4);
+}
+
+.code-css { 
+    color: #30aadd; 
+    text-shadow: 0 0 8px rgba(48, 170, 221, 0.4);
+}
+
+.code-js { 
+    color: #f2bf26; 
+    text-shadow: 0 0 8px rgba(242, 191, 38, 0.4);
+}
+
+/* status badges */
+.project-status-finished {
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #a6e3a1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(166, 227, 161, 0.15);
+    border: 1px solid rgba(166, 227, 161, 0.3);
+    text-shadow: 0 0 8px rgba(166, 227, 161, 0.4);
+}
+
+.project-status-wip {
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #f9e2af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(249, 226, 175, 0.15);
+    border: 1px solid rgba(249, 226, 175, 0.3);
+    text-shadow: 0 0 8px rgba(249, 226, 175, 0.4);
+}
+
+.project-status-paused {
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #f38ba8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(243, 139, 168, 0.15);
+    border: 1px solid rgba(243, 139, 168, 0.3);
+    text-shadow: 0 0 8px rgba(243, 139, 168, 0.4);
+}
+
+@media (max-width: 768px) {
+    .favourite-projects, .game-projects, .website-projects {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
