@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (!container) return;
 
             container.innerHTML = projects.map(p => {
-                // build language badges
                 const languages = (p.languages || [])
                     .map(lang => `<span class="${lang.class}">${lang.name}</span>`)
                     .join("/");
@@ -39,6 +38,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (err) {
         console.error("Failed to load projects:", err);
-        // TODO: maybe show an error message to the user?
     }
 });
