@@ -32,24 +32,32 @@ async function updateWeather() {
     }
 }
 updateWeather()
-setInterval(updateWeather, 300000); // every 5 mins
+setInterval(updateWeather, 300000);
 
-// just incase i get added to the webring
-/*(async () => {
-    const res = await fetch("https://silly.possiblyaxolotl.com/ring/webstring.js")
-    const text = await res.text()
-
+(async () => {
+    const response = await fetch('https://silly.possiblyaxolotl.com/ring/webstring.js')
+    const text = await response.text()
+    
     const sitesMatch = text.match(/sites:\s*(\[[\s\S]*?\]),/)
     if (!sitesMatch) return
-
     const sites = JSON.parse(sitesMatch[1].replace(/,\s*\]/, "]"))
-
-    const currentIndex = sites.findIndex(url => location.href.startsWith("https://verysilly.site"));
+    
+    const currentIndex = sites.findIndex(s => s.startsWith("https://verysilly.site"))
+    
+    if (currentIndex === -1) {
+        console.warn("verysilly.site is not in the ring")
+        return
+    }
+    
     const prev = sites[(currentIndex - 1 + sites.length) % sites.length]
     const next = sites[(currentIndex + 1) % sites.length]
     const random = sites[Math.floor(Math.random() * sites.length)]
-
-    document.getElementById("silly-prev").href = prev
-    document.getElementById("silly-next").href = next
-    document.getElementById("silly-rand").href = random
-})()*/
+    
+    const elPrev = document.getElementById("silly-prev")
+    const elNext = document.getElementById("silly-next")
+    const elRand = document.getElementById("silly-rand")
+    
+    if (elPrev) elPrev.href = prev
+    if (elNext) elNext.href = next
+    if (elRand) elRand.href = random
+})()
