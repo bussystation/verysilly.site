@@ -67,7 +67,6 @@ lanyard.addEventListener("open", () => {
 lanyard.addEventListener("message", event => {
     const data = JSON.parse(event.data);
     
-    // heartbeat setup
     if (data.op === 1) {
         const heartbeat_interval = data.d.heartbeat_interval;
         heartbeat = setInterval(() => {
@@ -182,8 +181,20 @@ lanyard.addEventListener("message", event => {
         )
 
         if (visibleCards.length % 2 === 1) {
-            const lastCard = visibleCards[visibleCards.length - 1]
-            lastCard.style.gridColumn = "1 / -1"
+            const lastCard = visibleCards[visibleCards.length - 1];
+            lastCard.style.gridColumn = "1 / -1";
+            
+            const textElements = lastCard.querySelectorAll('.game-name, .song-name, .movie-name, .game-details, .song-artist, .movie-details');
+            textElements.forEach(el => {
+                el.style.maxWidth = '800px';
+            });
+        } else {
+            visibleCards.forEach(card => {
+                const textElements = card.querySelectorAll('.game-name, .song-name, .movie-name, .game-details, .song-artist, .movie-details');
+                textElements.forEach(el => {
+                    el.style.maxWidth = '300px';
+                });
+            });
         }
         
         if (durationUpdateInterval) {
